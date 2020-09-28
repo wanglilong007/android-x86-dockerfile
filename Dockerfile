@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:18.04
 
 ENV branch q-x86
 ENV TARGET_PRODUCT android_x86_64
