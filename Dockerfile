@@ -11,7 +11,4 @@ RUN set -ex; \
     apt -y install libssl-dev python-enum34 python-mako syslinux-utils; \
     mkdir android-x86; cd android-x86; \
     repo init -u http://scm.osdn.net/gitroot/android-x86/manifest -b $branch; \
-    repo sync --no-tags --no-clone-bundle; \
-    . build/envsetup.sh; \
-    lunch $TARGET_PRODUCT-$TARGET_BUILD_VARIANT; \
-    m -j4 iso_img; m -j4 rpm; \
+    repo sync --no-tags --no-clone-bundle;
