@@ -12,6 +12,6 @@ RUN set -ex; \
     mkdir android-x86; cd android-x86; \
     repo init -u http://scm.osdn.net/gitroot/android-x86/manifest -b $branch; \
     repo sync --no-tags --no-clone-bundle; \
-    source build/envsetup.sh; \
+    . build/envsetup.sh; \
     lunch $TARGET_PRODUCT-$TARGET_BUILD_VARIANT; \
     m -j4 iso_img; m -j4 rpm; \
